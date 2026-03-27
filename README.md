@@ -3,6 +3,7 @@
 [![CI](https://github.com/philiprehberger/dotnet-regex-builder/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/dotnet-regex-builder/actions/workflows/ci.yml)
 [![NuGet](https://img.shields.io/nuget/v/Philiprehberger.RegexBuilder.svg)](https://www.nuget.org/packages/Philiprehberger.RegexBuilder)
 [![License](https://img.shields.io/github/license/philiprehberger/dotnet-regex-builder)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
 
 Fluent, readable regex construction — build patterns programmatically and compile to standard Regex objects.
 
