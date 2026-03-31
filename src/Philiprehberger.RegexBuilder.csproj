@@ -11,7 +11,7 @@
 
     <!-- Package metadata -->
     <PackageId>Philiprehberger.RegexBuilder</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>Philip Rehberger</Authors>
     <Description>Fluent, readable regex construction — build patterns programmatically and compile to standard Regex objects.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
