@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0 (2026-04-05)
+
+- Add `NamedGroup(string name, Action<PatternBuilder> inner)` method for named capture groups (`(?<name>...)`)
+
 ## 0.1.1 (2026-03-31)
 
 - Standardize README to 3-badge format with emoji Support section

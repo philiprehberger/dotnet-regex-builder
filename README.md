@@ -79,6 +79,16 @@ var match = datePattern.Match("2026-03-21");
 string year = match.Groups["year"].Value;  // "2026"
 string month = match.Groups["month"].Value; // "03"
 
+var timePattern = Pattern.Start()
+    .NamedGroup("hour", b => b.Digit().Times(2))
+    .Literal(":")
+    .NamedGroup("minute", b => b.Digit().Times(2))
+    .Build();
+
+var time = timePattern.Match("14:30");
+string hour = time.Groups["hour"].Value;   // "14"
+string minute = time.Groups["minute"].Value; // "30"
+
 var protocol = Pattern.Start()
     .Group(b => b.Literal("http").Group(b2 => b2.Literal("s")).Optional())
     .Literal("://")
@@ -121,6 +131,7 @@ bool matchesHttps = protocol.IsMatch("https://example.com"); // true
 | `ZeroOrMore()` | Repeat previous element zero or more times (`*`) |
 | `Group(Action<PatternBuilder> inner)` | Non-capturing group |
 | `CaptureGroup(string name, Action<PatternBuilder> inner)` | Named capturing group |
+| `NamedGroup(string name, Action<PatternBuilder> inner)` | Named capturing group (alias for `CaptureGroup`) |
 | `Or(Action<PatternBuilder> alt)` | Alternation with another pattern |
 | `StartOfLine()` | Append start-of-line anchor (`^`) |
 | `EndOfLine()` | Append end-of-line anchor (`$`) |

@@ -215,6 +215,18 @@ public class PatternBuilder
     }
 
     /// <summary>
+    /// Appends a named capturing group containing the pattern built by the inner action.
+    /// Generates a <c>(?&lt;name&gt;...)</c> pattern. This is an alias for <see cref="CaptureGroup"/>.
+    /// </summary>
+    /// <param name="name">The name of the capturing group.</param>
+    /// <param name="inner">An action that builds the group's inner pattern.</param>
+    /// <returns>This builder instance for chaining.</returns>
+    public PatternBuilder NamedGroup(string name, Action<PatternBuilder> inner)
+    {
+        return CaptureGroup(name, inner);
+    }
+
+    /// <summary>
     /// Appends an alternation (<c>|</c>) with the pattern built by the alternative action.
     /// </summary>
     /// <param name="alt">An action that builds the alternative pattern.</param>
